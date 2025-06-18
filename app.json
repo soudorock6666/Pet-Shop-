@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Mundo Dos Animais",
+    "slug": "app",
+    "version": "1.0.0",
+    "scheme": "mundodosanimais",
+    "orientation": "portrait",
+    "icon": "./assets/icone1.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icone1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Este aplicativo precisa acessar a câmera para tirar fotos.",
+        "NSPhotoLibraryUsageDescription": "Este aplicativo precisa acessar sua galeria para selecionar imagens."
+      },
+      "bundleIdentifier": "com.deadbuthappy.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES",
+        "INTERNET"
+      ],
+      "package": "com.deadbuthappy.app",
+      "versionCode": 1,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-firebase-core",
+        {
+          "googleServicesFile": "./google-services.json"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "04ffd7c4-a325-4ba9-bb1a-520a4e0af2f4"
+      }
+    },
+    "owner": "deadbuthappy"
+  }
+}
